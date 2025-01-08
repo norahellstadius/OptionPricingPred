@@ -1,0 +1,12 @@
+version: "3.4"  # or higher (3.7, 3.8, etc.)
+
+services:
+  server:
+    build:
+      context: .  # Specify the directory where the Dockerfile is located
+    image: option-price-img  # The name of the image to be created
+    volumes:
+      - .:/app  # Mount the current directory to the /app directory inside the container
+    working_dir: /app  # Set the working directory to /app
+    stdin_open: true
+    tty: true
